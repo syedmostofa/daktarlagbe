@@ -40,7 +40,7 @@ const register = async (req, res, next) => {
 
       if (role === 'doctor') {
         await client.query(
-          `INSERT INTO doctors (user_id, specialization, district)
+          `INSERT INTO doctors (user_id, specialty, location)
            VALUES ($1, '', '')`,
           [user.id]
         );
