@@ -40,7 +40,7 @@ const register = async (req, res, next) => {
 
       if (role === 'doctor') {
         await client.query(
-          `INSERT INTO doctors (user_id, specialty, location)
+          `INSERT INTO doctors (user_id, specialization, district)
            VALUES ($1, '', '')`,
           [user.id]
         );
@@ -103,7 +103,7 @@ const getMe = async (req, res, next) => {
 
     if (user.role === 'doctor') {
       const doctorResult = await pool.query(
-        `SELECT id, specialty, location, chamber_address, consultation_fee,
+        `SELECT id, specialization, district, chamber_address, consultation_fee,
                 bio, profile_picture_url, experience_years, created_at
          FROM doctors WHERE user_id = $1`,
         [user.id]
