@@ -1,4 +1,4 @@
-# doctor-booking-bd
+# daktarlagbe
 
 A web app for booking doctor appointments in Bangladesh. Patients can browse doctors by specialty or district, check available slots, and book appointments. Doctors can manage their profiles and time slots.
 
